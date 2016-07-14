@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Dog Profile Page</h1>
+        <p class='details'>
+            <% if (data) { %>
+          <strong>Name:</strong> <%= data[0].name %><br>
+          <strong>Info:</strong> <%= data[0].info %><br>
+          <a href="/dobes/<%= data[0]._id %>/edit">Edit</a> |
+          <% } %>
+          <a href="/">Back to the Doghouse</a>
+        </p>
+  </body>
+</html>

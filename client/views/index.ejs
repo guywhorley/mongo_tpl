@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <h1>All the Dobermanns!</h1>
+      <h3>They ARE watching you...</h3>
+
+      <div id="dobe-list">
+        <% if (dobes) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Info</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (d in dobes) { %>
+                        <tr>
+                            <td><%= dobes[d].name %></td>
+                            <td><%= dobes[d].info %></td>
+                            <td>
+                                <a href="/dobes/<%= dobes[d]._id %>">Details</a> |
+                                <a href="/dobes/<%= dobes[d]._id %>/edit">Edit</a> |
+                                <form class="remove" action="/dobes/<%= dobes[d]._id%>/destroy" method="post">
+                                  <input type="hidden"name = "_id" value="<%= dobes[d]._id %>">
+                                  <input type="submit" value="Remove" />
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } %>
+        <div id="create">
+            <a href="/dobes/new">Add a new dog to the pack</a>
+        </div>
+      </div>
+
+
+  </body>
+</html>

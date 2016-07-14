@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+      <h1>Edit this dog!</h1>
+      <form class="edit-dog" action="/dobes/<%= data[0]._id %>" method="post">
+        <input type="text" name="name" value="<%= data[0].name %>"><br>
+        <input type="text" name="info" value="<%= data[0].info %>"><br>
+        <input type="submit" value="Save">
+      </form>
+      <a href="/">Back to the Doghouse</a>
+  </body>
+</html>

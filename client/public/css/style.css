@@ -1,0 +1,72 @@
+body {
+
+  background-image: url("../img/doberman.jpeg");
+  background-repeat: no-repeat;
+  background-color: black;
+  color: tan;
+  text-align: center;
+  font-family: 'Courier';
+}
+
+.remove { display: inline; }
+.remove input[type=submit] {
+  border: none;
+  background-color: black;
+  color: gray;
+  font-size: 9pt;
+}
+.add-dog, .edit-dog { margin: auto; }
+
+.add-dog input, .edit-dog input { width: 250px; padding: 5px 0 5px 0; }
+.add-dog input[type=submit], .edit-dog input[type=submit] {
+  width: 253px;
+  border: none;
+  padding: 5px 0 5px 0;
+  background-color: brown;
+  color: white;
+  margin-top: 2px;
+}
+
+.remove input[type=submit]:hover {
+  text-decoration: underline;
+}
+
+a:visited, a:active, a:link {
+  color: gray;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 9pt;
+}
+a:hover { text-decoration: underline; }
+.details {
+  color: brown;
+  font-family: sans-serif;
+  width: 300px;
+  margin: auto;
+  text-align: left;
+}
+
+#dobe-list {
+  margin-top: 30px;
+  overflow-y: scroll;
+  height: 300px;
+}
+table {
+  font-family: san-serif;
+  width: 425px;
+  margin: auto;
+}
+tbody tr:nth-child(odd) { color: brown; }
+a { font-family: serif; }
+td, th {
+  text-align: left;
+  padding: 5px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+}
+#create {
+  margin-top: 40px;
+  color: brown;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
